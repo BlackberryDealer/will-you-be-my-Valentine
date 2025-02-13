@@ -12,4 +12,22 @@ document.getElementById("no-btn").addEventListener("mouseover", function() {
     btn.style.left = `${randomX}px`;
     btn.style.top = `${randomY}px`;
   });
+
+
+// When the Yes button is clicked, show the modal
+document.getElementById("yes-btn").addEventListener("click", function() {
+    document.getElementById("modal").style.display = "block";
+  });
   
+  // When the close button is clicked, hide the modal
+  document.getElementById("close-modal").addEventListener("click", function() {
+    document.getElementById("modal").style.display = "none";
+  });
+  
+  // Also hide the modal if the user clicks outside the modal content
+  window.addEventListener("click", function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
