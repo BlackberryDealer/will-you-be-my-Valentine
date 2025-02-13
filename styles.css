@@ -7,6 +7,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden; /* Prevents scrolling */
+    position: relative; /* Ensures absolute children are contained */
 }
 
 .container {
@@ -14,7 +16,7 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: auto;
+    text-align: center;
 }
 
 h1 {
@@ -51,5 +53,6 @@ button {
     background-color: #ffb6c1;
     color: black;
     position: absolute;
+    transition: left 0.2s, top 0.2s; /* Smooth movement */
 }
 
