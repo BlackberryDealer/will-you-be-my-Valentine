@@ -43,7 +43,6 @@ h1 {
 }
 
 .buttons {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -61,6 +60,7 @@ button {
 #yes-btn {
     background-color: #ff69b4;
     color: white;
+    padding: 10px 20px;
 }
 
 #yes-btn:hover {
@@ -70,9 +70,7 @@ button {
 #no-btn {
     background-color: #ffb6c1;
     color: black;
-    position: fixed;
+    padding: 10px 20px;
     transition: left 0.2s, top 0.2s; /* Smooth movement */
-    left: 150px;
-    top: 300px;
 }
 
