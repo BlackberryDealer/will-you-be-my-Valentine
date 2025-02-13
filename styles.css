@@ -11,6 +11,15 @@ body {
     position: relative; /* Ensures absolute children are contained */
 }
 
+.tenor-gif-embed {
+    display: block;
+    margin-bottom: 20px; /* Adds space between the GIF and the container */
+    max-width: 200px; /* Sets max width */
+    max-height: 200px; /* Sets max height */
+    margin-left: auto;
+    margin-right: auto; /* Centers the GIF horizontally */
+}
+
 .container {
     background: white;
     padding: 30px;
