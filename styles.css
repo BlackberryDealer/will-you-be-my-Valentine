@@ -16,7 +16,7 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    margin: auto;
 }
 
 h1 {
