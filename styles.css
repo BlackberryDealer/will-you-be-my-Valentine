@@ -119,30 +119,44 @@ button {
 
 
   /* Responsive adjustments for mobile devices */
-@media (max-width: 600px) {
+  @media (max-width: 600px) {
+    /* Let content flow vertically */
+    body {
+      display: block;
+      height: auto;
+      padding: 10px;
+    }
+  
+    /* Make the GIF container relative so it stacks above the container */
+    .gif-container {
+      position: relative;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80vw;       /* Use 80% of viewport width */
+      height: auto;      /* Let height adjust automatically */
+      max-height: 300px; /* Optionally limit the height */
+      margin: 0 auto 20px auto;
+    }
+  
+    /* Adjust the container width to nearly full width */
     .container {
-      width: 90%;
+      width: 90vw;
+      margin: 0 auto;
       padding: 20px;
     }
-    
-    .gif-container {
-      width: 300px;
-      height: 300px;
-      top: 50px;
+  
+    /* Ensure the buttons stay side by side but wrap if needed */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
-    
-    h1 {
-      font-size: 20px;
-    }
-    
+  
+    /* Scale down the buttons for mobile */
     button {
       font-size: 16px;
       padding: 8px 16px;
-    }
-    
-    .modal-content {
-      width: 90%;
-      margin: 20% auto;
-      padding: 15px;
     }
   }
