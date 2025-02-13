@@ -5,11 +5,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden; /* Prevents scrolling */
-    position: relative; /* Ensures absolute children are contained */
-}
+    position: relative;
+    /* Allow vertical scrolling if needed */
+    overflow-y: auto;
+    min-height: 100vh;
+  }
 
 
 .gif-container {
@@ -17,10 +17,10 @@ body {
     top: 100px; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
-    width: 400px; /* Set the desired width */
-    height: 400px; /* Set the desired height */
-    z-index: 1; /* Ensures the GIF is above the buttons */
-}
+    width: 400px;
+    height: 400px;
+    z-index: 0;  /* Lower than container */
+  }
 
 .gif {
     width: 100%;
@@ -33,9 +33,10 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative; /* So that absolute positioned children inside are relative to this container */
-    z-index: 0;
-}
+    position: relative;
+    z-index: 1; /* Ensure the container is above the gif-container */
+    margin-top: 520px; /* Push it down so it doesn’t overlap with the gif */
+  }
 
 h1 {
     font-size: 24px;
