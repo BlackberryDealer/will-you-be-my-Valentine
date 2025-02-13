@@ -50,11 +50,6 @@ button {
 #no-btn {
     background-color: #ffb6c1;
     color: black;
-    position: relative;
+    position: absolute;
 }
 
-#no-btn:hover {
-    position: absolute;
-    left: calc(50% - 60px);
-    top: calc(50% - 40px);
-}
