@@ -98,6 +98,9 @@ button {
     max-width: 400px;
     text-align: center;
     border-radius: 10px;
+    font-family: Arial, sans-serif; /* Consistent with site font */
+    font-size: 24px;
+    color: #d63384; /* Consistent text color */
   }
   
   /* Close button */
@@ -112,4 +115,34 @@ button {
   .close:hover,
   .close:focus {
     color: black;
+  }
+
+
+  /* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+    .container {
+      width: 90%;
+      padding: 20px;
+    }
+    
+    .gif-container {
+      width: 300px;
+      height: 300px;
+      top: 50px;
+    }
+    
+    h1 {
+      font-size: 20px;
+    }
+    
+    button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+    
+    .modal-content {
+      width: 90%;
+      margin: 20% auto;
+      padding: 15px;
+    }
   }
