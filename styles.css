@@ -17,8 +17,8 @@ body {
     top: 10px; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
-    width: 100px; /* Set the desired width */
-    height: 100px; /* Set the desired height */
+    width: 400px; /* Set the desired width */
+    height: 400px; /* Set the desired height */
     z-index: 1; /* Ensures the GIF is above the buttons */
 }
 
@@ -70,7 +70,9 @@ button {
 #no-btn {
     background-color: #ffb6c1;
     color: black;
-    position: absolute;
+    position: fixed;
     transition: left 0.2s, top 0.2s; /* Smooth movement */
+    left: 150px;
+    top: 300px;
 }
 
