@@ -1,163 +1,152 @@
+/* Basic styling for body */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #ffe4e1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    /* Allow vertical scrolling if needed */
-    overflow-y: auto;
-    min-height: 100vh;
-  }
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ffe4e1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
 
+/* Wrapper centers its content */
+.wrapper {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+/* GIF container now flows naturally */
 .gif-container {
-    position: absolute;
-    top: 100px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;
-    height: 400px;
-    z-index: 0;  /* Lower than container */
-  }
-
-.gif {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the GIF covers the container without distortion */
+  width: 400px;
+  height: 400px;
+  margin: 0 auto; /* Centers it */
 }
 
+/* Ensure the GIF fills its container */
+.gif-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The container with buttons is placed directly below the image */
 .container {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 1; /* Ensure the container is above the gif-container */
-    margin-top: 520px; /* Push it down so it doesn’t overlap with the gif */
-  }
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; /* Small gap between image and box */
+}
 
+/* Heading styling */
 h1 {
-    font-size: 24px;
-    color: #d63384;
+  font-size: 24px;
+  color: #d63384;
 }
 
+/* Button container styles */
 .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
+/* Button styles */
 button {
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 #yes-btn {
-    background-color: #ff69b4;
-    color: white;
-    padding: 10px 20px;
+  background-color: #ff69b4;
+  color: white;
 }
 
 #yes-btn:hover {
-    background-color: #ff1493;
+  background-color: #ff1493;
 }
 
 #no-btn {
-    background-color: #ffb6c1;
-    color: black;
-    padding: 10px 20px;
-    transition: left 0.2s, top 0.2s; /* Smooth movement */
+  background-color: #ffb6c1;
+  color: black;
+  transition: left 0.2s, top 0.2s;
 }
 
-
-/* Modal backdrop */
+/* Modal styling remains unchanged */
 .modal {
-    display: none;           /* hidden by default */
-    position: fixed;         /* fixed relative to viewport */
-    z-index: 1000;           /* on top of other elements */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;          /* enable scroll if needed */
-    background-color: rgba(0,0,0,0.5);  /* semi-transparent background */
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #d63384;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover,
+.close:focus {
+  color: black;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+  .wrapper {
+    width: 90%;
   }
-  
-  /* Modal content box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;        /* center vertically & horizontally */
+  .gif-container {
+    width: 80vw;
+    height: auto;
+    max-height: 300px;
+    margin: 0 auto 20px auto;
+  }
+  .container {
+    width: 90vw;
+    margin-top: 10px;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    border-radius: 10px;
-    font-family: Arial, sans-serif; /* Consistent with site font */
-    font-size: 24px;
-    color: #d63384; /* Consistent text color */
   }
-  
-  /* Close button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+  .buttons {
+    flex-wrap: wrap;
+    gap: 10px;
   }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
   }
-
-
-  /* Responsive adjustments for mobile devices */
-  @media (max-width: 600px) {
-    /* Let content flow vertically */
-    body {
-      display: block;
-      height: auto;
-      padding: 10px;
-    }
-  
-    /* Make the GIF container relative so it stacks above the container */
-    .gif-container {
-      position: relative;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80vw;       /* Use 80% of viewport width */
-      height: auto;      /* Let height adjust automatically */
-      max-height: 300px; /* Optionally limit the height */
-      margin: 0 auto 20px auto;
-    }
-  
-    /* Adjust the container width to nearly full width */
-    .container {
-      width: 90vw;
-      margin: 0 auto;
-      padding: 20px;
-    }
-  
-    /* Ensure the buttons stay side by side but wrap if needed */
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-  
-    /* Scale down the buttons for mobile */
-    button {
-      font-size: 16px;
-      padding: 8px 16px;
-    }
+  .modal-content {
+    width: 90%;
+    margin: 20% auto;
+    padding: 15px;
   }
+}
